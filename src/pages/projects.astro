@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectsGrid from "../components/ProjectsGrid.astro";
+
+const posts = await Astro.glob("../content/*.md");
+const sortedPosts = posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+---
+
+<Layout title="Marcel's cool projects">
+  <Header />
+  <div class="flex flex-col items-center w-full h-full page">
+    <div class="w-48 mt-8"></div>
+    <h1 class="pt-2 text-4xl font-bold">Marcel's cool projects</h1>
+    <h2 class="px-8 text-xl text-center xl:px-0">
+      Some cool projects I've worked on.
+    </h2>
+    <ProjectsGrid />
+  </div>
+</Layout>

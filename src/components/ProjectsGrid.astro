@@ -1,0 +1,14 @@
+---
+import ContentPreview from "../components/ContentPreview.astro";
+
+const posts = await Astro.glob("../content/*.md");
+const sortedPosts = posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+---
+
+<div class="grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-3 lg:p-8 xl:gap-8">
+  {sortedPosts.map((p) => <ContentPreview post={p} />)}
+</div>

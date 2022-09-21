@@ -1,0 +1,45 @@
+---
+export interface Props {
+  post: any;
+}
+
+import { getSlugFromPath } from "../utils/get-slug-from-path";
+import { parseISO, format } from "date-fns";
+const { post } = Astro.props;
+const url = "/projects/" + getSlugFromPath(post.file);
+const date = parseISO(post.frontmatter.date);
+const formattedDate = format(date, "LLLL d, yyyy");
+---
+
+<a
+  href={url}
+  class="relative flex w-full h-auto overflow-hidden text-black transition-opacity opacity-100 group aspect-video hover:opacity-70 rounded-xl bg-blue-500/80"
+  style={`background-image: url(${
+    post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
+  }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+>
+  <div
+    class="absolute top-0 max-w-full p-2 text-lg truncate rounded-br-lg bg-blue-500/80 md:text-2xl md:p-4 group-hover:underline"
+  >
+    {post.frontmatter.title}
+  </div>
+  {
+    post.frontmatter.description && (
+      <div class="absolute bottom-0 flex w-full flex-col justify-center bg-blue-500/80 p-2 md:p-4">
+        <div class="hidden sm:block">{formattedDate}</div>
+        <div class="text-md description md:text-xl">
+          {post.frontmatter.description}
+        </div>
+      </div>
+    )
+  }
+</a>
+
+<style>
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
