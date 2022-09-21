@@ -19,11 +19,11 @@ export async function getStaticPaths() {
 const { content } = Astro.props;
 ---
 
-<Layout title="MarcelRG personal website">
+<Layout title={content.title}>
   <Header />
   <div class="flex justify-center w-full h-full page">
     <div class="max-w-full lg:w-[42rem] xl:w-[64rem] px-4 lg:px-0 pt-8">
-      <a class="pt-8 text-xl" href="/blog">Project</a>
+      <a class="pt-8 text-xl" href="/projects">Project</a>
       <article class="pb-10 prose prose-lg lg:prose-xl max-w-none">
         <main>
           <content.Content />

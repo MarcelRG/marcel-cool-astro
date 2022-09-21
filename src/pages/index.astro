@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 import ProjectsGrid from "../components/ProjectsGrid.astro";
 ---
 
-<Layout title="MarcelRG personal website">
+<Layout>
   <Header />
   <main>
     <div
@@ -33,7 +33,7 @@ import ProjectsGrid from "../components/ProjectsGrid.astro";
         alt="Marcel collage"
       />
     </div>
-    <section class="px-4 py-10 mx-auto max-w-6xl" id="projects">
+    <div class="px-4 py-10 mx-auto max-w-6xl">
       <div class="flex flex-col lg:justify-between lg:flex-row">
         <h2
           class="max-w-lg text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading"
@@ -42,6 +42,9 @@ import ProjectsGrid from "../components/ProjectsGrid.astro";
         </h2>
       </div>
       <ProjectsGrid />
-    </section>
+    </div>
+    <div class="flex h-96 justify-center">
+      <h class="text-6xl">Contact</h>
+    </div>
   </main>
 </Layout>
