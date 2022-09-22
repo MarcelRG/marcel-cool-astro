@@ -7,8 +7,8 @@ import { Icon } from "astro-icon";
 import { getSlugFromPath } from "../../utils/get-slug-from-path";
 
 export async function getStaticPaths() {
-  const content = await Astro.glob("../../content/*.md");
-  const paths = content.map((content) => {
+  const allContent = await Astro.glob("../../content/*.md");
+  const paths = allContent.map((content) => {
     const slug = getSlugFromPath(content.file);
 
     return {
@@ -27,8 +27,8 @@ const formattedDate = format(date, "LLLL d, yyyy");
 <Layout title={"Marcel's Project: " + content.frontmatter.title}>
   <Header />
   <div class="px-10 py-4 mx-auto w-full max-w-6xl">
-    <a class="pt-8 text-xl" href="/projects">Projects</a>
-    <article class="pb-10 prose prose-lg lg:prose-xl max-w-none">
+    <a class="text-xl" href="/projects">Projects</a>
+    <article>
       <main>
         <h1 class="text-4xl font-black lg:text-6xl">
           {content.frontmatter.title}
@@ -39,7 +39,7 @@ const formattedDate = format(date, "LLLL d, yyyy");
           class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
           alt={content.frontmatter.title}
         />
-        <div>
+        <div class="prose prose-lg lg:prose-xl max-w-none">
           <content.Content />
         </div>
       </main>

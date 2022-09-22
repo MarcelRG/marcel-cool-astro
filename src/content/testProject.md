@@ -2,7 +2,7 @@
 title: "One"
 date: "2020-12-22"
 description: "Hey there this is just a test post"
-image: "../../public/images/MarcelCollage.png"
+image: "/images/MarcelCollage.png"
 category: "project"
 tags: [tech stack, tailwind, full-stack]
 isPinned: true
