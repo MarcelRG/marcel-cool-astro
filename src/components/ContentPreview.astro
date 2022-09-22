@@ -13,23 +13,21 @@ const formattedDate = format(date, "LLLL d, yyyy");
 
 <a
   href={url}
-  class="relative flex w-full h-auto overflow-hidden text-black transition-opacity opacity-100 group aspect-video hover:opacity-70 rounded-xl bg-blue-500/80"
+  class="relative flex w-full h-auto overflow-hidden text-black transition-opacity opacity-100 group aspect-video hover:opacity-70 rounded-xl"
   style={`background-image: url(${
     post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
   }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
 >
   <div
-    class="absolute top-0 max-w-full p-2 text-lg truncate rounded-br-lg bg-blue-500/80 md:text-2xl md:p-4 group-hover:underline"
+    class="absolute top-0 max-w-full p-2 text-md truncate rounded-br-lg bg-white/50 md:backdrop-blur-sm"
   >
-    {post.frontmatter.title}
+    {formattedDate}
   </div>
   {
     post.frontmatter.description && (
-      <div class="absolute bottom-0 flex w-full flex-col justify-center bg-blue-500/80 p-2 md:p-4">
-        <div class="hidden sm:block">{formattedDate}</div>
-        <div class="text-md description md:text-xl">
-          {post.frontmatter.description}
-        </div>
+      <div class="absolute bottom-0 flex w-full flex-col justify-center bg-white/50 p-2 md:backdrop-blur-sm">
+        <div class="text-sm md:text-xl">{post.frontmatter.title}</div>
+        <div class="md:text-md text-sm">{post.frontmatter.description}</div>
       </div>
     )
   }

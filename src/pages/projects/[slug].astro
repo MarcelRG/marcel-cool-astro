@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import { Icon } from "astro-icon";
 
 import { getSlugFromPath } from "../../utils/get-slug-from-path";
 
@@ -19,19 +20,27 @@ export async function getStaticPaths() {
 const { content } = Astro.props;
 ---
 
-<Layout title={content.title}>
+<Layout title={"Marcel's Project: " + content.frontmatter.title}>
   <Header />
-  <div class="flex justify-center w-full h-full page">
-    <div class="max-w-full lg:w-[42rem] xl:w-[64rem] px-4 lg:px-0 pt-8">
-      <a class="pt-8 text-xl" href="/projects">Project</a>
-      <article class="pb-10 prose prose-lg lg:prose-xl max-w-none">
-        <main>
+  <div class="px-10 py-4 mx-auto w-full max-w-6xl">
+    <a class="pt-8 text-xl" href="/projects">Projects</a>
+    <article class="pb-10 prose prose-lg lg:prose-xl max-w-none">
+      <main>
+        <h1 class="text-4xl font-black lg:text-6xl">
+          {content.frontmatter.title}
+        </h1>
+        <img
+          src={content.frontmatter.image}
+          class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
+          alt={content.frontmatter.title}
+        />
+        <div>
           <content.Content />
-        </main>
-      </article>
-      <div class="pb-8">
-        <a href="/projects">{"Go back"}</a>
-      </div>
+        </div>
+      </main>
+    </article>
+    <div class="pb-8">
+      <a href="/projects">{"Go back"}</a>
     </div>
   </div>
 </Layout>
