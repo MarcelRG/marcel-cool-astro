@@ -14,20 +14,5 @@
       document.body.classList.toggle("overflow-hidden");
       document.getElementById("menu")?.classList.toggle("hidden");
     });
-
-    attachEvent("[data-aw-toggle-color-scheme]", "click", function () {
-      document.documentElement.classList.toggle("dark");
-      localStorage.theme = document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
-    });
-  };
-  window.onpageshow = function () {
-    const elem = document.querySelector("[data-aw-toggle-menu]");
-    if (elem) {
-      elem.classList.remove("expanded");
-    }
-    document.body.classList.remove("overflow-hidden");
-    document.getElementById("menu")?.classList.add("hidden");
   };
 </script>
