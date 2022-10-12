@@ -13,24 +13,28 @@ const formattedDate = format(date, "LLLL d, yyyy");
 
 <a
   href={url}
-  class="relative flex w-full h-auto overflow-hidden text-black transition-opacity opacity-100 group aspect-video hover:opacity-70 rounded-xl"
-  style={`background-image: url(${
-    post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
-  }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+  class="relative flex w-full h-auto overflow-hidden text-white transition-opacity opacity-100 group aspect-video hover:opacity-70"
 >
   <div
-    class="absolute top-0 max-w-full p-2 text-md truncate rounded-br-lg bg-white/50 md:backdrop-blur-sm"
+    class="relative m-2 flex w-full h-auto overflow-hidden text-white transition-opacity group aspect-video rounded-xl"
+    style={`background-image: url(${
+      post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
+    }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+  >
+    {
+      post.frontmatter.description && (
+        <div class="absolute bottom-0 flex w-full flex-col justify-center bg-blue-500/80 p-2 md:backdrop-blur-sm">
+          <div class="text-sm md:text-xl">{post.frontmatter.title}</div>
+          <div class="md:text-md text-sm">{post.frontmatter.description}</div>
+        </div>
+      )
+    }
+  </div>
+  <div
+    class="absolute top-0 max-w-full p-2 text-md rounded-full bg-blue-500 md:backdrop-blur-sm"
   >
     {formattedDate}
   </div>
-  {
-    post.frontmatter.description && (
-      <div class="absolute bottom-0 flex w-full flex-col justify-center bg-white/50 p-2 md:backdrop-blur-sm">
-        <div class="text-sm md:text-xl">{post.frontmatter.title}</div>
-        <div class="md:text-md text-sm">{post.frontmatter.description}</div>
-      </div>
-    )
-  }
 </a>
 
 <style>
