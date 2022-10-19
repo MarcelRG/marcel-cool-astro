@@ -9,6 +9,6 @@ const sortedPosts = posts.sort(
 );
 ---
 
-<div class="grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-3 lg:p-8 xl:gap-8">
+<div class="grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-3">
   {sortedPosts.map((p) => <ContentPreview post={p} />)}
 </div>
