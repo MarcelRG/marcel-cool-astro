@@ -19,6 +19,19 @@ import Contact from "../components/Contact.astro";
         </h1>
         <h2 class="text-2xl md:text-4xl">and I'm a fullstack developer</h2>
         <div>
+          <ul class="pb-4">
+            <li>
+              <a
+                class="border-2 border-black hover:bg-black hover:text-white rounded-full text-lg p-2.5 inline-flex items-center"
+                aria-label="bio"
+                href="/bio"
+              >
+                <p class="p-2">more about me</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <iframe
             class="rounded-xl h-20 w-full md:h-40"
             src="https://open.spotify.com/embed/playlist/3ZNq5kDil3xqjLtvyhcL7s?utm_source=generator"
@@ -41,7 +54,7 @@ import Contact from "../components/Contact.astro";
           <span class="inline-block mb-1 sm:mb-4">Projects</span>
         </h2>
       </div>
-      <ProjectsGrid />
+      <ProjectsGrid onlyPinned={true} />
     </div>
     <Contact />
   </main>

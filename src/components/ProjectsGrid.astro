@@ -1,12 +1,14 @@
 ---
+export interface Props {
+  onlyPinned: boolean;
+}
+
 import ContentPreview from "../components/ContentPreview.astro";
 
+const { onlyPinned } = Astro.props;
 const posts = await Astro.glob("../content/*.md");
-const sortedPosts = posts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
-);
+const pinnedPosts = posts.filter((post) => post.frontmatter.isPinned);
+const sortedPosts = onlyPinned ? pinnedPosts : posts;
 ---
 
 <div class="grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-3">
