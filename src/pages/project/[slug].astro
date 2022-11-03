@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import { parseISO, format } from "date-fns";
+import { Icon } from "astro-icon";
+
+import { getSlugFromPath } from "../../utils/get-slug-from-path";
+
+export async function getStaticPaths() {
+  const allContent = await Astro.glob("../../content/*.md");
+  const paths = allContent.map((content) => {
+    const slug = getSlugFromPath(content.file);
+
+    return {
+      params: { slug },
+      props: { content },
+    };
+  });
+  return paths;
+}
+const { content } = Astro.props;
+
+const date = parseISO(content.frontmatter.date);
+const formattedDate = format(date, "LLLL d, yyyy");
+---
+
+<Layout
+  title={content.frontmatter.title + ": " + content.frontmatter.description}
+>
+  <Header />
+  <div class="px-10 py-4 mx-auto w-full max-w-6xl">
+    <a class="text-xl" href="/projects">Project</a>
+    <article>
+      <main>
+        <h1 class="text-4xl font-black lg:text-6xl">
+          {content.frontmatter.title}
+        </h1>
+        <h2 class="text-2xl md:text-4xl">{formattedDate}</h2>
+        <img
+          src={content.frontmatter.image}
+          class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
+          alt={content.frontmatter.title}
+        />
+        <div class="prose prose-lg lg:prose-xl max-w-none">
+          <content.Content />
+        </div>
+      </main>
+    </article>
+    <div class="pb-8">
+      <a href="/projects">{"Go back"}</a>
+    </div>
+  </div>
+</Layout>

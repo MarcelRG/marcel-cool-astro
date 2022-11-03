@@ -1,9 +1,9 @@
 ---
-title: "Two"
-date: "2019-12-22"
+title: "BLOG Two"
+date: "2022-12-22"
 description: "Hey there this is just a test post"
 image: "https://images.pexels.com/photos/3626475/pexels-photo-3626475.jpeg?auto=compress&cs=tinysrgb&w=600"
-category: "project"
+category: "blog"
 tags: [tech stack, tailwind, full-stack]
 isPinned: true
 ---

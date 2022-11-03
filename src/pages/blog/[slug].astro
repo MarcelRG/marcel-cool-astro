@@ -24,10 +24,12 @@ const date = parseISO(content.frontmatter.date);
 const formattedDate = format(date, "LLLL d, yyyy");
 ---
 
-<Layout title={"Marcel's Project: " + content.frontmatter.title}>
+<Layout
+  title={content.frontmatter.title + ": " + content.frontmatter.description}
+>
   <Header />
   <div class="px-10 py-4 mx-auto w-full max-w-6xl">
-    <a class="text-xl" href="/projects">Projects</a>
+    <a class="text-xl" href="/blog">Blog</a>
     <article>
       <main>
         <h1 class="text-4xl font-black lg:text-6xl">
@@ -45,7 +47,7 @@ const formattedDate = format(date, "LLLL d, yyyy");
       </main>
     </article>
     <div class="pb-8">
-      <a href="/projects">{"Go back"}</a>
+      <a href="/blog">{"Go back"}</a>
     </div>
   </div>
 </Layout>
