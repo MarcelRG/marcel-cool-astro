@@ -12,24 +12,20 @@ import Contact from "../components/Contact.astro";
       class="p-3 mx-auto w-full flex flex-wrap-reverse justify-center md:flex-nowrap md:justify-between max-w-6xl md:px-4"
     >
       <div
-        class="w-50 p-2 text-center flex flex-col justify-between md:text-left md:p-4"
+        class="w-50 py-2 text-center flex flex-col justify-between md:text-left md:py-4"
       >
         <h1 class="text-4xl font-black md:text-6xl">
           Hi, I'm <br class="hidden md:block" />Marcel Rodríguez
         </h1>
-        <h2 class="text-2xl md:text-4xl">and I'm a fullstack developer</h2>
-        <div>
-          <ul class="pb-4">
-            <li>
-              <a
-                class="border-2 border-black hover:bg-black hover:text-white rounded-full text-lg p-2.5 inline-flex items-center"
-                aria-label="bio"
-                href="/bio"
-              >
-                <p class="p-2">more about me</p>
-              </a>
-            </li>
-          </ul>
+        <h2 class="text-2xl md:text-4xl">and I'm a fullstack developer.</h2>
+        <div class="py-4">
+          <a
+            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center"
+            aria-label="bio"
+            href="/bio"
+          >
+            <p class="p-2">more about me</p>
+          </a>
         </div>
         <div>
           <iframe
@@ -42,11 +38,11 @@ import Contact from "../components/Contact.astro";
       </div>
       <img
         class="h-64 sm:h-96"
-        src="../../images/MarcelCollage.png"
+        src="/images/MarcelCollage.png"
         alt="Marcel collage"
       />
     </div>
-    <div class="px-3 py-8 mx-auto max-w-6xl">
+    <div class="px-3 mx-auto max-w-6xl">
       <div class="flex flex-col lg:justify-between lg:flex-row">
         <h2
           class="max-w-lg text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading"

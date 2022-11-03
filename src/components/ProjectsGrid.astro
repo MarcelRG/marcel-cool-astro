@@ -11,6 +11,6 @@ const pinnedPosts = posts.filter((post) => post.frontmatter.isPinned);
 const sortedPosts = onlyPinned ? pinnedPosts : posts;
 ---
 
-<div class="grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-3">
+<div class="grid w-full grid-cols-1 p-4 lg:grid-cols-3">
   {sortedPosts.map((p) => <ContentPreview post={p} />)}
 </div>
