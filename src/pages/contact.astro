@@ -1,7 +1,10 @@
 ---
-import Contact from "../components/Contact.astro";
+import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<Header />
-<Contact />
+<Layout title="Marcel's cool contact info">
+  <Header />
+  <main><Contact /></main>
+</Layout>

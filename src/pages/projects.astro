@@ -7,13 +7,15 @@ import Contact from "../components/Contact.astro";
 
 <Layout title="Marcel's cool projects">
   <Header />
-  <div class="flex flex-col items-center w-full h-full page">
-    <div class="w-48 mt-8"></div>
-    <h1 class="pt-2 text-4xl font-bold">Marcel's projects</h1>
-    <h2 class="px-8 text-xl text-center xl:px-0">
-      Some cool projects I've worked on.
-    </h2>
-    <ProjectGrid onlyPinned={false} postCategory={"project"} />
-  </div>
+  <main>
+    <div class="flex flex-col items-center w-full h-full page">
+      <div class="w-48 mt-8"></div>
+      <h1 class="pt-2 text-4xl font-bold">Marcel's projects</h1>
+      <h2 class="px-8 text-xl text-center xl:px-0">
+        Some cool projects I've worked on.
+      </h2>
+      <ProjectGrid onlyPinned={false} postCategory={"project"} />
+    </div>
+  </main>
   <Contact />
 </Layout>

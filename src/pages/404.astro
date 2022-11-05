@@ -3,30 +3,32 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 ---
 
-<Layout title={"Error 404 | Marcel's cool website."}>
+<Layout title="Error 404 | Marcel's cool website.">
   <Header />
-  <section class="flex items-center h-full p-16">
-    <div
-      class="container flex flex-col items-center justify-center px-5 mx-auto my-8"
-    >
-      <div class="max-w-md text-center">
-        <h2 class="mb-8 font-bold text-9xl">
-          <span class="sr-only">Error</span>
-          <span>404</span>
-        </h2>
-        <p class="text-3xl font-semibold md:text-3xl">
-          Well this is awkward...
-        </p>
-        <p class="mt-4 mb-8 text-lg text-gray-600 -slate-400">
-          This page doesn't exist or the link might be broken.
-        </p>
-        <a
-          rel="noopener noreferrer"
-          href="/"
-          class="btn text-white bg-gray-900 hover:bg-gray-600 ml-4"
-          >Go back home</a
-        >
+  <main>
+    <section class="flex items-center h-full p-16">
+      <div
+        class="container flex flex-col items-center justify-center px-5 mx-auto my-8"
+      >
+        <div class="max-w-md text-center">
+          <h2 class="mb-8 font-bold text-9xl">
+            <span class="sr-only">Error</span>
+            <span>404</span>
+          </h2>
+          <p class="text-3xl font-semibold md:text-3xl">
+            Well this is awkward...
+          </p>
+          <p class="mt-4 mb-8 text-lg text-gray-600 -slate-400">
+            This page doesn't exist or the link might be broken.
+          </p>
+          <a
+            rel="noopener noreferrer"
+            href="/"
+            class="btn text-white bg-gray-900 hover:bg-gray-600 ml-4"
+            >Go back home</a
+          >
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </Layout>
