@@ -6,6 +6,7 @@ image: "https://images.pexels.com/photos/3626475/pexels-photo-3626475.jpeg?auto=
 category: "project"
 tags: [tech stack, tailwind, full-stack]
 isPinned: true
+draft: true
 ---
 
 ## Dictum integer fusce ac ridiculus et odio sollicitudin diam at

@@ -19,11 +19,7 @@ import Contact from "../components/Contact.astro";
         </h1>
         <h2 class="text-2xl md:text-4xl">and I'm a fullstack developer.</h2>
         <div class="py-4">
-          <a
-            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
-            aria-label="bio"
-            href="/bio"
-          >
+          <a class="btn" aria-label="bio" href="/blog/bio">
             <p class="p-2">more about me</p>
           </a>
         </div>
@@ -52,11 +48,7 @@ import Contact from "../components/Contact.astro";
       </div>
       <ProjectGrid onlyPinned={true} postCategory={"project"} />
       <div class="flex justify-center">
-        <a
-          class="bg-black border-black border-2 text-white hover:bg-white hover:text-black rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
-          aria-label="projects"
-          href="/projects"
-        >
+        <a class="btn" aria-label="projects" href="/projects">
           <p class="p-4">view more projects</p>
         </a>
       </div>
@@ -71,11 +63,7 @@ import Contact from "../components/Contact.astro";
       </div>
       <ProjectGrid onlyPinned={true} postCategory={"blog"} />
       <div class="flex justify-center">
-        <a
-          class="bg-black border-black border-2 text-white hover:bg-white hover:text-black rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
-          aria-label="blog"
-          href="/blog"
-        >
+        <a class="btn" aria-label="blog" href="/blog">
           <p class="p-4">view more blog posts</p>
         </a>
       </div>

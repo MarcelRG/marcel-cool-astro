@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^1.0.1",
+    "@astrojs/vercel": "^2.3.3",
     "astro": "^1.2.3",
     "astro-icon": "^0.7.3",
     "date-fns": "^2.29.3",

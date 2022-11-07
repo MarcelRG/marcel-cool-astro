@@ -6,6 +6,7 @@ image: "/images/MarcelCollage.png"
 category: "project"
 tags: [tech stack, tailwind, full-stack]
 isPinned: false
+draft: true
 ---
 
 ## Dictum integer fusce ac ridiculus et odio sollicitudin diam at
