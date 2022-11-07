@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 ---
 
-<Layout title="Error 404 | Marcel's cool website.">
+<Layout title="Error 404 | Marcel's cool website">
   <Header />
   <main>
     <section class="flex items-center h-full p-16">
@@ -18,11 +18,11 @@ import Header from "../components/Header.astro";
           <p class="text-3xl font-semibold md:text-3xl">
             Well this is awkward...
           </p>
-          <p class="m-4 text-lg text-gray-600 -slate-400">
+          <p class="pb-4 text-lg text-gray-600 -slate-400">
             This page doesn't exist or the link might be broken.
           </p>
           <a
-            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center"
+            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
             aria-label="home"
             href="/"
           >
