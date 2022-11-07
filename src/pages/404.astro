@@ -18,15 +18,16 @@ import Header from "../components/Header.astro";
           <p class="text-3xl font-semibold md:text-3xl">
             Well this is awkward...
           </p>
-          <p class="mt-4 mb-8 text-lg text-gray-600 -slate-400">
+          <p class="m-4 text-lg text-gray-600 -slate-400">
             This page doesn't exist or the link might be broken.
           </p>
           <a
-            rel="noopener noreferrer"
+            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center"
+            aria-label="home"
             href="/"
-            class="btn text-white bg-gray-900 hover:bg-gray-600 ml-4"
-            >Go back home</a
           >
+            <p class="p-2">go home</p>
+          </a>
         </div>
       </div>
     </section>

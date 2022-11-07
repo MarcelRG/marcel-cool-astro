@@ -20,7 +20,7 @@ import Contact from "../components/Contact.astro";
         <h2 class="text-2xl md:text-4xl">and I'm a fullstack developer.</h2>
         <div class="py-4">
           <a
-            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center"
+            class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
             aria-label="bio"
             href="/bio"
           >
@@ -51,8 +51,17 @@ import Contact from "../components/Contact.astro";
         </h2>
       </div>
       <ProjectGrid onlyPinned={true} postCategory={"project"} />
+      <div class="flex justify-center">
+        <a
+          class="bg-black border-black border-2 text-white rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
+          aria-label="projects"
+          href="/projects"
+        >
+          <p class="p-4">view more projects</p>
+        </a>
+      </div>
     </div>
-    <div class="px-3 mx-auto max-w-6xl">
+    <div class="px-3 pb-8 mx-auto max-w-6xl">
       <div class="flex flex-col lg:justify-between lg:flex-row">
         <h2
           class="max-w-lg text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading"
@@ -61,7 +70,17 @@ import Contact from "../components/Contact.astro";
         </h2>
       </div>
       <ProjectGrid onlyPinned={true} postCategory={"blog"} />
+      <div class="flex justify-center">
+        <a
+          class="bg-black border-black border-2 text-white rounded-full text-lg p-1 inline-flex items-center transition-scale scale-100 hover:scale-110 ease-out duration-300"
+          aria-label="blog"
+          href="/blog"
+        >
+          <p class="p-4">view more blog posts</p>
+        </a>
+      </div>
     </div>
+
     <Contact />
   </main>
 </Layout>

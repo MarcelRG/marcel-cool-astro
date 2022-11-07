@@ -41,13 +41,19 @@ const formattedDate = format(date, "LLLL d, yyyy");
           class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
           alt={content.frontmatter.title}
         />
-        <div class="prose prose-lg lg:prose-xl max-w-none">
+        <div class="prose prose-lg md:prose-lg md:p-8 mx-auto max-w-6xl">
           <content.Content />
         </div>
       </main>
     </article>
-    <div class="pb-8">
-      <a href="/projects">{"Go back"}</a>
+    <div class="pb-4">
+      <a
+        class="bg-black border-black border-2 hover:bg-white hover:text-black text-white rounded-full text-lg p-1 inline-flex items-center"
+        aria-label="projects"
+        href="/projects"
+      >
+        <p class="p-2">go back</p>
+      </a>
     </div>
   </div>
 </Layout>

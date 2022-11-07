@@ -2,34 +2,45 @@
 import { Icon } from "astro-icon";
 ---
 
-<div class="min-h-screen flex items-center justify-center overflow-hidden">
-  <div class="relative w-full max-w-lg">
+<div
+  class="min-h-full flex items-center justify-center overflow-hidden p-4 bg-orange-200"
+>
+  <div class="relative">
     <div
-      class="absolute top-0 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-hard-light filter opacity-70 animate-blob"
+      class="absolute -bottom-10 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-hard-light animate-blob"
     >
     </div>
     <div
-      class="absolute top-0 -right-40 w-96 h-96 bg-yellow-600 rounded-full mix-blend-hard-light filter opacity-70 animate-blob delay-1000"
-    >
-    </div>
-    <div
-      class="absolute -bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-hard-light filter opacity-70 animate-blob delay-1000"
-    >
-    </div>
-    <div
-      class="absolute bottom-20 left-20 w-96 h-96 bg-red-500 rounded-full mix-blend-hard-light filter opacity-70 animate-blob delay-1000"
+      class="absolute top-0 -right-40 w-96 h-96 bg-orange-600 rounded-full mix-blend-hard-light animate-blob"
     >
     </div>
 
     <div
-      class="flex flex-col justify-center text-center bg-white/20 drop-shadow-2xl backdrop-blur-md text-slate-50 mx-auto md:px-24 lg:px-8 lg:py-52 max-w-6xl rounded-3xl"
+      class="absolute -bottom-20 -right-40 w-96 h-96 bg-yellow-600 rounded-full mix-blend-hard-light animate-blob"
     >
-      <h1 class="px-32 text-4xl lg:text-6xl">Contact</h1>
+    </div>
+    <div
+      class="absolute -bottom-20 left-40 w-96 h-96 bg-blue-600 rounded-full mix-blend-hard-light animate-blob"
+    >
+    </div>
+    <div
+      class="absolute top-2 -left-40 w-96 h-96 bg-red-600 rounded-full mix-blend-hard-light animate-blob"
+    >
+    </div>
+    <div
+      class="absolute top-2 left-40 w-96 h-96 bg-green-600 rounded-full mix-blend-hard-light filter blur-none animate-blob"
+    >
+    </div>
+
+    <div
+      class="flex flex-col px-8 py-8 justify-center text-center bg-white/20 drop-shadow-md text-white mx-auto md:px-8 md:py-48 max-w-6xl rounded-3xl backdrop-blur-lg"
+    >
+      <h1 class="text-4xl p-2 md:text-6xl">Contact</h1>
       <div class="flex flex-row justify-center">
-        <ul class="md:flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+        <ul class="md:flex space-x-2 space-y-2 md:space-y-0">
           <li>
             <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-800 rounded-full text-sm p-2.5 inline-flex items-center"
               aria-label="Mail"
               href="mailto:mrodrigonz@gmail.com?subject=Wanna%20collab%3F&body=Hi%20there%2C%20I%20saw%20your%20website%20and%20I%20thought%20it%20was%20really%20cool.%20Anyways%2C%20I%20want%20to..."
             >
@@ -39,7 +50,7 @@ import { Icon } from "astro-icon";
           </li>
           <li>
             <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
               aria-label="Instagram"
               href="#"
             >
@@ -49,7 +60,7 @@ import { Icon } from "astro-icon";
           </li>
           <li>
             <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
               aria-label="Facebook"
               href="#"
             >
@@ -59,7 +70,7 @@ import { Icon } from "astro-icon";
           </li>
           <li>
             <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
               aria-label="RSS"
               href="/rss.xml"
             >
@@ -69,7 +80,7 @@ import { Icon } from "astro-icon";
           </li>
           <li>
             <a
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
               aria-label="Github"
               href="https://github.com/onwidget/astrowind"
             >
