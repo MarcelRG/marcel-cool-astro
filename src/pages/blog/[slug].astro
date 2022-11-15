@@ -2,12 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import { parseISO, format } from "date-fns";
-import { Icon } from "astro-icon";
 
 import { getSlugFromPath } from "../../utils/get-slug-from-path";
 
 export async function getStaticPaths() {
-  const allContent = await Astro.glob("../../content/*.md");
+  const allContent = await Astro.glob("../../content/*.mdx");
   const paths = allContent.map((content) => {
     const slug = getSlugFromPath(content.file);
 

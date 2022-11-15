@@ -7,7 +7,7 @@ export interface Props {
 import ContentPreview from "../components/ContentPreview.astro";
 
 const { onlyPinned, postCategory } = Astro.props;
-const posts = await Astro.glob("../content/*.md");
+const posts = await Astro.glob("../content/*.mdx");
 const postType = posts.filter(
   (post) => post.frontmatter.category == postCategory
 );
