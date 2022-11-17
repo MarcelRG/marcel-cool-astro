@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import Contact from "../../components/Contact.astro";
 import { parseISO, format } from "date-fns";
 
 import { getSlugFromPath } from "../../utils/get-slug-from-path";
@@ -51,4 +52,5 @@ const formattedDate = format(date, "LLLL d, yyyy");
       </a>
     </div>
   </div>
+  <Contact />
 </Layout>
