@@ -1,6 +1,6 @@
-# <a href="www.marcel.cool" target="_blank">marcel.cool</a>
+# <a href="www.marcel.cool">marcel.cool</a>
 
-<a href="www.marcel.cool" target="_blank"><img href="www.marcel.cool" src="/public/images/m.webp" alt="M logo"></a>
+<a href="www.marcel.cool"><img href="www.marcel.cool" src="/public/images/m.webp" alt="M logo"></a>
 
 ## A new personal website.
 
@@ -56,4 +56,4 @@ In the end, tailwind's animation utilites where fine for most of what I needed.
 - Automate SEO.
 - Filter by blog tags.
 
-### Post Link: <a href="www.marcel.cool/project/marcelcool" target="_blank">marcel.cool/project/marcelcool</a>
+### Post Link: <a href="www.marcel.cool/project/marcelcool">marcel.cool/project/marcelcool</a>
