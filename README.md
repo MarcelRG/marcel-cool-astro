@@ -1,4 +1,4 @@
-# marcel.cool personal website
+# <a href="www.marcel.cool">marcel.cool</a>
 
 ![M logo](/public/images/m.webp)
 
@@ -36,6 +36,7 @@ The speed at which I was able to translate my figma designs to code truly impres
 
 I thought about adding more fancy 3D animations using three.js or greensock.
 Even went so far as to do some 3D renders on spline, check them out:
+
 ![3DM](/public/images/3DM.gif)
 
 Buuut I decided to keep it simple, since I didn't want to impact load times.
@@ -54,3 +55,5 @@ In the end, tailwind's animation utilites where fine for most of what I needed.
 - astro islands: To add fancy UI components while not impacting performance
 - Automate SEO.
 - Filter by blog tags.
+
+### Post Link: <a href="www.marcel.cool/project/marcelcool">marcel.cool/project/marcelcool</a>
