@@ -11,7 +11,7 @@ I decided to update my personal website for three main reasons:
 3. Try out new tech.
 
 Figma low fidelity design:
-![figmaMarcelcool](/images/figmaMarcelcool.webp)
+![figmaMarcelcool](/public/images/figmaMarcelcool.webp)
 
 Goals I had for this new website:
 
@@ -36,7 +36,7 @@ The speed at which I was able to translate my figma designs to code truly impres
 
 I thought about adding more fancy 3D animations using three.js or greensock.
 Even went so far as to do some 3D renders on spline, check them out:
-![3DM](/images/3DM.gif)
+![3DM](/public/images/3DM.gif)
 
 Buuut I decided to keep it simple, since I didn't want to impact load times.
 In the end, tailwind's animation utilites where fine for most of what I needed.
