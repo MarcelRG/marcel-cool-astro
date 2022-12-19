@@ -4,6 +4,14 @@
 
 ## A new personal website.
 
+### Post Link: <a href="www.marcelrg.com/project/marcelcool">www.marcelrg.com/project/marcelcool</a>
+### Notable features:
+
+- Great lighthouse scores
+- Cool tailwind hover animations
+- Pin 3 projects and blogs to show in homescreen
+- Music playlist you can listen to while navigating
+
 I decided to update my personal website for three main reasons:
 
 1. Finally get around building a blog, not just a project showcase.
@@ -42,18 +50,9 @@ Even went so far as to do some 3D renders on spline, check them out:
 Buuut I decided to keep it simple, since I didn't want to impact load times.
 In the end, tailwind's animation utilites where fine for most of what I needed.
 
-### Notable features:
-
-- Great lighthouse scores
-- Cool tailwind hover animations
-- Pin 3 projects and blogs to show in homescreen
-- Music playlist you can listen to while navigating
-
 ### Features that would be cool to implement latter:
 
 - astrojs/images: To automatically optimize images based on squoosh
 - astro islands: To add fancy UI components while not impacting performance
 - Automate SEO.
 - Filter by blog tags.
-
-### Post Link: <a href="www.marcelrg.com/project/marcelcool">www.marcelrg.com/project/marcelcool</a>
