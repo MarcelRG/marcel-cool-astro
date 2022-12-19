@@ -16,7 +16,7 @@ Figma low fidelity design:
 Goals I had for this new website:
 
 - Fast load times in dev and production
-- Good blog writting experience using markdown
+- Good blog writing experience using markdown
 - Flexible enough to fit my cool and sometimes wacky designs
 
 With those goals in mind, I figured that it might be a good idea to build this new website using astro and tailwind.
@@ -26,7 +26,7 @@ With those goals in mind, I figured that it might be a good idea to build this n
 ### Astro
 
 Love at first sight. It's just so quick to setup everything up, incredible fast and adaptable to multiple frontend tools.
-Will definetly be using it again in case I need to build another blog or some other type of documentation.
+Will definitely be using it again in case I need to build another blog or some other type of documentation.
 
 ### Tailwind
 
@@ -40,7 +40,7 @@ Even went so far as to do some 3D renders on spline, check them out:
 ![3DM](/public/images/3DM.gif)
 
 Buuut I decided to keep it simple, since I didn't want to impact load times.
-In the end, tailwind's animation utilites where fine for most of what I needed.
+In the end, tailwind's animation utilities where fine for most of what I needed.
 
 ### Notable features:
 
