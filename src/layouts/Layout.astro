@@ -5,6 +5,7 @@ export interface Props {
   title?: string;
 }
 const { title = "Marcel's cool website" } = Astro.props as Props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ const { title = "Marcel's cool website" } = Astro.props as Props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-
+  <ViewTransitions />
   <body class="antialiased bg-white">
     <slot />
     <UseToggleMenu />

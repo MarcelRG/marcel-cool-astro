@@ -19,7 +19,7 @@ const formattedDate = format(date, "LLLL d, yyyy");
     class="relative m-5 flex w-full h-auto text-white aspect-video rounded-xl"
     style={`background-image: url(${
       post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
-    }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+    }); background-size: cover; background-repeat: no-repeat; background-position: center; transition:name=${post.frontmatter.image}`}
   >
     {
       post.frontmatter.description && (
