@@ -5,10 +5,10 @@ export interface Props {
   title?: string;
 }
 const { title = "Marcel's cool website" } = Astro.props as Props;
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
   <head>
     <meta charset="UTF-8" />

@@ -1,18 +1,18 @@
 <script is:inline>
-  function attachEvent(selector, event, fn) {
-    const matches = document.querySelectorAll(selector);
-    if (matches && matches.length) {
-      matches.forEach((elem) => {
-        elem.addEventListener(event, () => fn(elem), false);
-      });
-    }
-  }
-
-  window.onload = function () {
-    attachEvent("[data-aw-toggle-menu]", "click", function (elem) {
-      elem.classList.toggle("expanded");
-      document.body.classList.toggle("overflow-hidden");
-      document.getElementById("menu")?.classList.toggle("hidden");
+function attachEvent(selector, event, fn) {
+  const matches = document.querySelectorAll(selector);
+  if (matches && matches.length) {
+    matches.forEach((elem) => {
+      elem.addEventListener(event, () => fn(elem), false);
     });
-  };
+  }
+}
+
+window.onload = function () {
+  attachEvent("[data-aw-toggle-menu]", "click", function (elem) {
+    elem.classList.toggle("expanded");
+    document.body.classList.toggle("overflow-hidden");
+    document.getElementById("menu")?.classList.toggle("hidden");
+  });
+};
 </script>
