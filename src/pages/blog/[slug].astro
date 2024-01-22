@@ -40,6 +40,7 @@ const formattedDate = format(date, "LLLL d, yyyy");
         </h2>
         <img
           src={content.frontmatter.image}
+          transition:name={content.frontmatter.title}
           class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
           alt={content.frontmatter.title}
         />
