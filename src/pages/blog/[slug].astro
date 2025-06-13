@@ -22,6 +22,7 @@ const { content } = Astro.props;
 
 const date = parseISO(content.frontmatter.date);
 const formattedDate = format(date, "LLLL d, yyyy");
+const slug = getSlugFromPath(content.file);
 ---
 
 <Layout
@@ -32,7 +33,10 @@ const formattedDate = format(date, "LLLL d, yyyy");
     <a class="text-xl" href="/blog">Blog</a>
     <article>
       <main>
-        <h1 class="text-4xl font-black lg:text-6xl">
+        <h1
+          class="text-4xl font-black lg:text-6xl"
+          transition:name={`title-${slug}`}
+        >
           {content.frontmatter.title}
         </h1>
         <h2 class="text-2xl md:text-4xl">
@@ -40,7 +44,7 @@ const formattedDate = format(date, "LLLL d, yyyy");
         </h2>
         <img
           src={content.frontmatter.image}
-          transition:name={content.frontmatter.title}
+          transition:name={`img-${slug}`}
           class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
           alt={content.frontmatter.title}
         />

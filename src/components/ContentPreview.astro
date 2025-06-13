@@ -9,6 +9,7 @@ const { post } = Astro.props;
 const url = post.frontmatter.category + "/" + getSlugFromPath(post.file);
 const date = parseISO(post.frontmatter.date);
 const formattedDate = format(date, "LLLL d, yyyy");
+const slug = getSlugFromPath(post.file);
 ---
 
 <a
@@ -16,22 +17,27 @@ const formattedDate = format(date, "LLLL d, yyyy");
   class="relative flex w-full h-auto overflow-hidden text-white aspect-video transition-scale scale-100 hover:scale-110 ease-out duration-300"
 >
   <div
-    class="relative m-5 flex w-full h-auto text-white aspect-video rounded-xl"
-    style={`background-image: url(${
-      post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"
-    }); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+    class="relative m-5 flex w-full h-auto text-white aspect-video rounded-xl overflow-hidden"
   >
+    <img
+      src={post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"}
+      alt={post.frontmatter.title}
+      class="absolute inset-0 w-full h-full object-cover rounded-xl"
+      transition:name={`img-${slug}`}
+    />
     {
       post.frontmatter.description && (
-        <div class=" absolute bottom-0 flex w-full flex-col justify-center rounded-b-xl border-2 border-black bg-white p-2 text-black md:backdrop-blur-sm">
-          <div class="text-lg md:text-xl">{post.frontmatter.title}</div>
-          <div class=" md:text-md text-sm">{post.frontmatter.description}</div>
+        <div class="absolute bottom-0 flex w-full flex-col justify-center rounded-b-xl border-2 border-black bg-white p-2 text-black md:backdrop-blur-sm z-10">
+          <div class="text-lg md:text-xl" transition:name={`title-${slug}`}>
+            {post.frontmatter.title}
+          </div>
+          <div class="md:text-md text-sm">{post.frontmatter.description}</div>
         </div>
       )
     }
   </div>
   <div
-    class="absolute top-0 max-w-full p-2 text-md rounded-full bg-black md:backdrop-blur-sm"
+    class="absolute top-0 max-w-full p-2 text-md rounded-full bg-black md:backdrop-blur-sm z-10"
   >
     {formattedDate}
   </div>
