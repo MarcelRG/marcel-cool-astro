@@ -46,7 +46,7 @@ const slug = getSlugFromPath(content.file);
         <Image
           src={content.frontmatter.image}
           transition:name={`img-${slug}`}
-          class="m-4 h-64 w-50 lg:h-96 object-fit-cover mx-auto rounded-md shadow-lg"
+          class="m-4 max-w-xs h-auto mx-auto rounded-md shadow-lg"
           alt={content.frontmatter.title}
           width={800}
           height={384}

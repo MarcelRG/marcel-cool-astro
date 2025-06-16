@@ -11,7 +11,13 @@ import ToggleMenu from "./ToggleMenu.astro";
   >
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
-        <Image src="/images/m.webp" height={60} width={60} alt="M logo" />
+        <Image
+          src="/images/m.webp"
+          height={60}
+          width={60}
+          alt="M logo"
+          loading="eager"
+        />
         <span
           class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap"
         >
