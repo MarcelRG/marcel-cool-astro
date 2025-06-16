@@ -3,6 +3,7 @@ export interface Props {
   post: any;
 }
 
+import { Image } from "astro:assets";
 import { getSlugFromPath } from "../utils/get-slug-from-path";
 import { parseISO, format } from "date-fns";
 const { post } = Astro.props;
@@ -19,11 +20,13 @@ const slug = getSlugFromPath(post.file);
   <div
     class="relative m-5 flex w-full h-auto text-white aspect-video rounded-xl overflow-hidden"
   >
-    <img
+    <Image
       src={post.frontmatter.image ?? "../../public/faviconToBeChanged.svg"}
       alt={post.frontmatter.title}
       class="absolute inset-0 w-full h-full object-cover rounded-xl"
       transition:name={`img-${slug}`}
+      width={800}
+      height={450}
     />
     {
       post.frontmatter.description && (

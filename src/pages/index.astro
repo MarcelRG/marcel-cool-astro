@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import ProjectGrid from "../components/ProjectGrid.astro";
@@ -33,10 +34,13 @@ import Contact from "../components/Contact.astro";
           ></iframe>
         </div>
       </div>
-      <img
+      <Image
         class="h-64 sm:h-96"
         src="/images/MarcelCollage.webp"
         alt="Marcel collage"
+        width={400}
+        height={384}
+        loading="eager"
       />
     </div>
     <div class="px-3 mx-auto max-w-6xl">
