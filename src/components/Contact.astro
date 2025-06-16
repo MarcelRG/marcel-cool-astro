@@ -1,97 +1,68 @@
 ---
 import { Icon } from "astro-icon";
+import ShaderBackground from "./ShaderBackground.tsx";
 ---
 
-<div
-  class="min-h-screen flex items-center justify-center overflow-hidden p-4 bg-orange-200"
->
-  <div class="relative">
-    <div
-      class="absolute -bottom-10 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-hard-light animate-blob"
-    >
-    </div>
-    <div
-      class="absolute top-0 -right-40 w-96 h-96 bg-orange-600 rounded-full mix-blend-hard-light animate-blob"
-    >
-    </div>
-
-    <div
-      class="absolute -bottom-20 -right-40 w-96 h-96 bg-yellow-600 rounded-full mix-blend-hard-light animate-blob"
-    >
-    </div>
-    <div
-      class="absolute -bottom-20 left-52 w-96 h-96 bg-blue-600 rounded-full mix-blend-hard-light animate-blob"
-    >
-    </div>
-    <div
-      class="absolute top-2 -left-40 w-96 h-96 bg-red-600 rounded-full mix-blend-hard-light animate-blob"
-    >
-    </div>
-    <div
-      class="absolute top-2 left-52 w-96 h-96 bg-green-600 rounded-full mix-blend-hard-light filter blur-none animate-blob"
-    >
-    </div>
-
-    <div
-      class="flex flex-col px-8 py-8 justify-center text-center bg-white/20 drop-shadow-md text-white mx-auto md:px-8 md:py-48 max-w-6xl rounded-3xl backdrop-blur-lg"
-    >
-      <h1 class="text-4xl p-2 md:text-6xl">Contact</h1>
-      <div class="flex flex-row justify-center">
-        <ul class="md:flex space-x-2 space-y-2 md:space-y-0">
-          <li>
-            <a
-              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-800 rounded-full text-sm p-2.5 inline-flex items-center"
-              aria-label="Mail"
-              href="mailto:mrodrigonz@gmail.com?subject=Wanna%20collab%3F&body=Hi%20there%2C%20I%20saw%20your%20website%20and%20I%20thought%20it%20was%20really%20cool.%20Anyways%2C%20I%20want%20to..."
-            >
-              <Icon name="tabler:mail" class="w-5 h-5" />
-              <p class="p-2">mrodrigonz@gmail.com</p>
-            </a>
-          </li>
-          <li>
-            <a
-              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-              aria-label="Resume"
-              href="https://docs.google.com/document/d/11TY5CpzZ0VeqW68_FHe8Ncx7Ud8qbcDDXETJXPtscTo/edit?usp=sharing"
-              target="_blank"
-            >
-              <Icon name="tabler:file-text" class="w-5 h-5" />
-              <p class="p-2">Resume</p>
-            </a>
-          </li>
-          <li>
-            <a
-              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-              aria-label="Github"
-              href="https://github.com/MarcelRG"
-              target="_blank"
-            >
-              <Icon name="tabler:brand-github" class="w-5 h-5" />
-              <p class="p-2">MarcelRG</p>
-            </a>
-          </li>
+<ShaderBackground client:load>
+  <div
+    class="flex flex-col px-8 py-8 justify-center text-center bg-white/20 drop-shadow-md text-white mx-auto md:px-8 md:py-48 max-w-6xl rounded-3xl backdrop-blur-lg"
+  >
+    <h1 class="text-4xl p-2 md:text-6xl">Contact</h1>
+    <div class="flex flex-row justify-center">
+      <ul class="md:flex space-x-2 space-y-2 md:space-y-0">
+        <li>
+          <a
+            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-800 rounded-full text-sm p-2.5 inline-flex items-center"
+            aria-label="Mail"
+            href="mailto:mrodrigonz@gmail.com?subject=Wanna%20collab%3F&body=Hi%20there%2C%20I%20saw%20your%20website%20and%20I%20thought%20it%20was%20really%20cool.%20Anyways%2C%20I%20want%20to..."
+          >
+            <Icon name="tabler:mail" class="w-5 h-5" />
+            <p class="p-2">mrodrigonz@gmail.com</p>
+          </a>
+        </li>
+        <li>
           <a
             class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-            aria-label="linkedin"
-            href="https://www.linkedin.com/in/marcelrg/"
+            aria-label="Resume"
+            href="https://docs.google.com/document/d/11TY5CpzZ0VeqW68_FHe8Ncx7Ud8qbcDDXETJXPtscTo/edit?usp=sharing"
             target="_blank"
           >
-            <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
-            <p class="p-2">Linkedin</p>
+            <Icon name="tabler:file-text" class="w-5 h-5" />
+            <p class="p-2">Resume</p>
           </a>
-          <li>
-            <a
-              class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-              aria-label="Whatsapp"
-              href="https://wa.me/521812444111?text=Hi%20Marcel!%20Let%27s%20collab%20"
-              target="_blank"
-            >
-              <Icon name="tabler:brand-whatsapp" class="w-5 h-5" />
-              <p class="p-2">Whatsapp</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+        </li>
+        <li>
+          <a
+            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
+            aria-label="Github"
+            href="https://github.com/MarcelRG"
+            target="_blank"
+          >
+            <Icon name="tabler:brand-github" class="w-5 h-5" />
+            <p class="p-2">MarcelRG</p>
+          </a>
+        </li>
+        <a
+          class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
+          aria-label="linkedin"
+          href="https://www.linkedin.com/in/marcelrg/"
+          target="_blank"
+        >
+          <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
+          <p class="p-2">Linkedin</p>
+        </a>
+        <li>
+          <a
+            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
+            aria-label="Whatsapp"
+            href="https://wa.me/521812444111?text=Hi%20Marcel!%20Let%27s%20collab%20"
+            target="_blank"
+          >
+            <Icon name="tabler:brand-whatsapp" class="w-5 h-5" />
+            <p class="p-2">Whatsapp</p>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</ShaderBackground>
