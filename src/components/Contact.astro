@@ -1,68 +1,77 @@
 ---
 import { Icon } from "astro-icon";
 import ShaderBackground from "./ShaderBackground.tsx";
+
+// Contact links configuration for better maintainability and performance
+const contactLinks = [
+  {
+    href: "mailto:mrodrigonz@gmail.com?subject=Wanna%20collab%3F&body=Hi%20there%2C%20I%20saw%20your%20website%20and%20I%20thought%20it%20was%20really%20cool.%20Anyways%2C%20I%20want%20to...",
+    icon: "tabler:mail",
+    label: "mrodrigonz@gmail.com",
+    ariaLabel: "Send email to Marcel",
+    external: false,
+  },
+  {
+    href: "https://docs.google.com/document/d/11TY5CpzZ0VeqW68_FHe8Ncx7Ud8qbcDDXETJXPtscTo/edit?usp=sharing",
+    icon: "tabler:file-text",
+    label: "Resume",
+    ariaLabel: "View Marcel's resume",
+    external: true,
+  },
+  {
+    href: "https://github.com/MarcelRG",
+    icon: "tabler:brand-github",
+    label: "MarcelRG",
+    ariaLabel: "Visit Marcel's GitHub profile",
+    external: true,
+  },
+  {
+    href: "https://www.linkedin.com/in/marcelrg/",
+    icon: "tabler:brand-linkedin",
+    label: "LinkedIn",
+    ariaLabel: "Connect on LinkedIn",
+    external: true,
+  },
+  {
+    href: "https://wa.me/521812444111?text=Hi%20Marcel!%20Let%27s%20collab%20",
+    icon: "tabler:brand-whatsapp",
+    label: "WhatsApp",
+    ariaLabel: "Message on WhatsApp",
+    external: true,
+  },
+];
+
+// Shared CSS classes for consistency and better performance
+const linkClasses =
+  "hover:bg-black hover:text-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center transition-all duration-100 ease-in-out transform hover:shadow-lg active:scale-95";
 ---
 
-<ShaderBackground client:load>
+<ShaderBackground client:idle>
   <div
-    class="flex flex-col px-8 py-8 justify-center text-center bg-white/20 drop-shadow-md text-white mx-auto md:px-8 md:py-48 max-w-6xl rounded-3xl backdrop-blur-lg"
+    class="flex flex-col px-8 py-8 justify-center text-center bg-white/30 backdrop-blur-sm drop-shadow-md text-white mx-auto md:px-8 md:py-32 max-w-6xl rounded-3xl"
   >
-    <h1 class="text-4xl p-2 md:text-6xl">Contact</h1>
-    <div class="flex flex-row justify-center">
-      <ul class="md:flex space-x-2 space-y-2 md:space-y-0">
-        <li>
-          <a
-            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-800 rounded-full text-sm p-2.5 inline-flex items-center"
-            aria-label="Mail"
-            href="mailto:mrodrigonz@gmail.com?subject=Wanna%20collab%3F&body=Hi%20there%2C%20I%20saw%20your%20website%20and%20I%20thought%20it%20was%20really%20cool.%20Anyways%2C%20I%20want%20to..."
-          >
-            <Icon name="tabler:mail" class="w-5 h-5" />
-            <p class="p-2">mrodrigonz@gmail.com</p>
-          </a>
-        </li>
-        <li>
-          <a
-            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-            aria-label="Resume"
-            href="https://docs.google.com/document/d/11TY5CpzZ0VeqW68_FHe8Ncx7Ud8qbcDDXETJXPtscTo/edit?usp=sharing"
-            target="_blank"
-          >
-            <Icon name="tabler:file-text" class="w-5 h-5" />
-            <p class="p-2">Resume</p>
-          </a>
-        </li>
-        <li>
-          <a
-            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-            aria-label="Github"
-            href="https://github.com/MarcelRG"
-            target="_blank"
-          >
-            <Icon name="tabler:brand-github" class="w-5 h-5" />
-            <p class="p-2">MarcelRG</p>
-          </a>
-        </li>
-        <a
-          class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-          aria-label="linkedin"
-          href="https://www.linkedin.com/in/marcelrg/"
-          target="_blank"
-        >
-          <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
-          <p class="p-2">Linkedin</p>
-        </a>
-        <li>
-          <a
-            class="hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-full text-sm p-2.5 inline-flex items-center"
-            aria-label="Whatsapp"
-            href="https://wa.me/521812444111?text=Hi%20Marcel!%20Let%27s%20collab%20"
-            target="_blank"
-          >
-            <Icon name="tabler:brand-whatsapp" class="w-5 h-5" />
-            <p class="p-2">Whatsapp</p>
-          </a>
-        </li>
+    <h1 class="text-4xl p-2 md:text-6xl font-bold">Contact</h1>
+    <nav class="flex flex-row justify-center" aria-label="Contact links">
+      <ul class="md:flex flex-wrap gap-2 space-y-2 md:space-y-0 justify-center">
+        {
+          contactLinks.map((link) => (
+            <li>
+              <a
+                class={linkClasses}
+                aria-label={link.ariaLabel}
+                href={link.href}
+                {...(link.external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
+              >
+                <Icon name={link.icon} class="w-5 h-5 flex-shrink-0" />
+                <span class="p-2">{link.label}</span>
+              </a>
+            </li>
+          ))
+        }
       </ul>
-    </div>
+    </nav>
   </div>
 </ShaderBackground>
